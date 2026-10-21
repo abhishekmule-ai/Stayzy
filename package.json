@@ -1,0 +1,16 @@
+{
+  "name": "stayzy-mumbai-project",
+  "version": "1.0.0",
+  "description": "Stayzy - Mumbai PG and Hostel Finder",
+  "scripts": {
+    "dev": "npm --prefix client run dev",
+    "dev:all": "node scripts/start-all.js",
+    "client": "npm --prefix client run dev",
+    "server": "npm --prefix server run dev",
+    "build": "npm --prefix client run build",
+    "test": "npm --prefix server test"
+  },
+  "keywords": ["pg", "hostel", "mumbai", "stayzy", "react", "express"],
+  "author": "",
+  "license": "ISC"
+}
