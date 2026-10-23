@@ -108,7 +108,7 @@ export default function StudentDashboardPage() {
             </div>
             <h1 style={{ fontSize: '1.8rem', fontWeight: 800 }}>Welcome, {user.name}</h1>
             <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
-              {user.email} &bull; Mumbai Accommodation Portal
+              {user.email} • Mumbai Accommodation Portal
             </p>
           </div>
         </div>

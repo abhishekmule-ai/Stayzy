@@ -82,6 +82,9 @@ export async function login(req, res, next) {
       { expiresIn: '7d' }
     );
 
+    // Record login timestamp in database
+    await StayzyRepo.updateLastLogin(userRecord.id);
+
     const { password_hash, ...safeUser } = userRecord;
 
     res.json({

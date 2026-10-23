@@ -8,6 +8,27 @@ import * as enquiriesController from '../controllers/enquiriesController.js';
 
 const router = Router();
 
+// 0. API Root Index
+router.get('/', (req, res) => {
+  res.json({
+    name: 'Stayzy Mumbai REST API',
+    version: '1.0.0',
+    status: 'online',
+    message: 'Welcome to Stayzy API. Below are the available endpoints:',
+    endpoints: {
+      health: '/api/v1/health',
+      areas: '/api/v1/areas',
+      listings: '/api/v1/listings',
+      listing_details: '/api/v1/listings/1',
+      auth_login: 'POST /api/v1/auth/login',
+      auth_register: 'POST /api/v1/auth/register',
+      favorites: 'GET /api/v1/favorites (requires Bearer token)',
+      student_enquiries: 'GET /api/v1/student/enquiries (requires Bearer token)',
+      owner_listings: 'GET /api/v1/owner/listings (requires Owner Bearer token)',
+    },
+  });
+});
+
 // 1. System Health
 router.get('/health', (req, res) => {
   res.json({

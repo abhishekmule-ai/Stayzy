@@ -215,6 +215,18 @@ export const StayzyRepo = {
     return safeUser;
   },
 
+  async updateLastLogin(userId) {
+    if (isDbConnected()) {
+      await getPool().execute(
+        'UPDATE users SET last_login_at = CURRENT_TIMESTAMP WHERE id = ?',
+        [userId]
+      );
+    } else {
+      const user = memoryUsers.find(u => u.id === Number(userId));
+      if (user) user.last_login_at = new Date().toISOString();
+    }
+  },
+
   // --- AREAS ---
   async getAreas() {
     if (isDbConnected()) {

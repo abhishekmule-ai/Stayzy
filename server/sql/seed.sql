@@ -15,8 +15,8 @@ ON DUPLICATE KEY UPDATE name=name;
 
 -- 2. Insert Seed Users (Password: password123, hashed with bcrypt $2a$10$wKkS...)
 INSERT INTO users (id, name, email, password_hash, role, phone) VALUES
-(1, 'Aarav Sharma', 'student@stayzy.in', '$2a$10$Z3oF/Ksp.n4Zl0pC8oUeUeg3kYd4XQ8rW6JqWz612JcQ63rK5K1re', 'student', '+91 98765 43210'),
-(2, 'Suresh Kulkarni', 'owner@stayzy.in', '$2a$10$Z3oF/Ksp.n4Zl0pC8oUeUeg3kYd4XQ8rW6JqWz612JcQ63rK5K1re', 'owner', '+91 98201 55432')
+(1, 'Aarav Sharma', 'student@stayzy.in', '$2a$10$ZwnI8GlV6y8mWzseTnkqde3sjp1PKdufoL8/5xz8HSovVrJUEfWxC', 'student', '+91 98765 43210'),
+(2, 'Suresh Kulkarni', 'owner@stayzy.in', '$2a$10$ZwnI8GlV6y8mWzseTnkqde3sjp1PKdufoL8/5xz8HSovVrJUEfWxC', 'owner', '+91 98201 55432')
 ON DUPLICATE KEY UPDATE email=email;
 
 -- 3. Insert Initial Listings

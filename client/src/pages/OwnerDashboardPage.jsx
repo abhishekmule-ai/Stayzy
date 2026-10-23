@@ -222,7 +222,7 @@ export default function OwnerDashboardPage() {
                     <td style={{ padding: '1rem 0.5rem', fontWeight: 500 }}>{l.area}</td>
                     <td style={{ padding: '1rem 0.5rem' }}>
                       <span className="badge badge-neutral" style={{ textTransform: 'capitalize' }}>
-                        {l.propertyType} &bull; {l.roomSharing}
+                        {l.propertyType} • {l.roomSharing}
                       </span>
                     </td>
                     <td style={{ padding: '1rem 0.5rem', fontWeight: 700, color: 'var(--color-primary-dark)' }}>
@@ -293,7 +293,7 @@ export default function OwnerDashboardPage() {
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.35rem' }}>
                   <div style={{ fontWeight: 700, fontSize: '0.95rem' }}>
-                    {enq.name} <span style={{ fontWeight: 400, color: 'var(--color-muted)' }}>({enq.email}{enq.phone ? ` &bull; ${enq.phone}` : ''})</span>
+                    {enq.name} <span style={{ fontWeight: 400, color: 'var(--color-muted)' }}>({enq.email}{enq.phone ? ` • ${enq.phone}` : ''})</span>
                   </div>
                   <span className="badge badge-primary">
                     For: {enq.listingTitle || 'Your Property'}
@@ -303,7 +303,7 @@ export default function OwnerDashboardPage() {
                   "{enq.message}"
                 </p>
                 <div style={{ fontSize: '0.75rem', color: 'var(--color-muted)' }}>
-                  Preferred Move-in: {enq.moveInDate || 'Flexible'} &bull; Received on {new Date(enq.createdAt).toLocaleDateString('en-IN')}
+                  Preferred Move-in: {enq.moveInDate || 'Flexible'} • Received on {new Date(enq.createdAt).toLocaleDateString('en-IN')}
                 </div>
               </div>
             ))}

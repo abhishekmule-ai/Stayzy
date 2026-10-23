@@ -2,15 +2,29 @@
   "name": "stayzy-mumbai-project",
   "version": "1.0.0",
   "description": "Stayzy - Mumbai PG and Hostel Finder",
+  "type": "module",
   "scripts": {
     "dev": "npm --prefix client run dev",
     "dev:all": "node scripts/start-all.js",
     "client": "npm --prefix client run dev",
     "server": "npm --prefix server run dev",
     "build": "npm --prefix client run build",
-    "test": "npm --prefix server test"
+    "test": "npm --prefix server test",
+    "db:view": "npm --prefix server run db:view",
+    "db:setup": "npm --prefix server run db:setup",
+    "screenshots": "node scripts/capture-all.js"
   },
-  "keywords": ["pg", "hostel", "mumbai", "stayzy", "react", "express"],
+  "keywords": [
+    "pg",
+    "hostel",
+    "mumbai",
+    "stayzy",
+    "react",
+    "express"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "puppeteer-core": "^25.15.0"
+  }
 }
